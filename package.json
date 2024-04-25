@@ -1,0 +1,15 @@
+{
+  "name": "cypress-first",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {},
+  "scripts": {
+    "test": "cypress"
+  },
+  "author": "Lisa",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "cypress": "^13.8.1"
+  }
+}
