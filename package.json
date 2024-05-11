@@ -4,8 +4,8 @@
   "main": "index.js",
   "dependencies": {},
   "scripts": {
-    "test": "cypress",
-    "cy:dashboard": "npx cypress run --record --key e98e565c-e1fb-49d1-9494-690b463e8ab4"
+    "cy:dashboard": "npx cypress run --record --key e98e565c-e1fb-49d1-9494-690b463e8ab4",
+    "test": "cypress"
   },
   "author": "Lisa",
   "license": "ISC",
