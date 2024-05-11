@@ -5,6 +5,9 @@
   "dependencies": {},
   "scripts": {
     "cy:dashboard": "npx cypress run --record --key e98e565c-e1fb-49d1-9494-690b463e8ab4",
+    "cy:run:spec:chrome": "npx cypress run --browser chrome --spec cypress/e2e/sqlVerifierHomePage.cy.js",
+    "cy:run:spec:electron": "npx cypress run --browser electron --spec 'cypress/e2e/sqlVerifierLinks.cy.js'",
+    "cy:run:spec:crossbrowser": "npm run cy:run:spec:chrome && npm run cy:run:spec:electron",
     "test": "cypress"
   },
   "author": "Lisa",
