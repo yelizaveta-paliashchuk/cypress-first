@@ -27,3 +27,9 @@
 Cypress.Commands.add('verifyUrlEndpoint', (endpoint) => {
   cy.url().should('include', `/${endpoint}`)
 })
+Cypress.Commands.add('clickOn', (selector) => {
+  cy.get(`[data-cy="${selector}"]`).click()
+})
+Cypress.Commands.add('getCy', (selector) => {
+  cy.get(`[data-cy="${selector}"]`)
+})
