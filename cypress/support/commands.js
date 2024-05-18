@@ -33,3 +33,11 @@ Cypress.Commands.add('clickOn', (selector) => {
 Cypress.Commands.add('getCy', (selector) => {
   cy.get(`[data-cy="${selector}"]`)
 })
+Cypress.Commands.add('changePassword', (currentPassword, newPassword) => {
+  cy.clickOn('accountMenu')
+  cy.contains('Password').click()
+  cy.getCy('currentPassword').type(currentPassword)
+  cy.getCy('newPassword').type(newPassword)
+  cy.getCy('confirmPassword').type(newPassword)
+  cy.clickOn('submit')
+})

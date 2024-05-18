@@ -2,7 +2,6 @@
   "name": "cypress-first",
   "version": "1.0.0",
   "main": "index.js",
-  "dependencies": {},
   "scripts": {
     "cy:dashboard": "npm run cy:run:spec:crossbrowser --record --key e98e565c-e1fb-49d1-9494-690b463e8ab4",
     "cy:run:spec:chrome": "npx cypress run --browser chrome --spec cypress/e2e/sqlVerifierHomePage.cy.js",
@@ -14,6 +13,7 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
     "cypress": "^13.8.1"
   }
 }
