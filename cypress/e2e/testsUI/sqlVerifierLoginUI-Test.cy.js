@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker'
-import { LoginPage } from '../pages/loginPage'
-const loginPageElements = require('../fixtures/pages/loginPageSelectors.json')
+import { LoginPage } from '../../pages/loginPage'
+const loginPageElements = require('../../fixtures/pages/loginPageSelectors.json')
 
 const username = 'khely'
 const initialPassword = '1232123SV'
