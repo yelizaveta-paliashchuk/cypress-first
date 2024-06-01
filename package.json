@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "cy:dashboard": "npm run cy:run:spec:crossbrowser --record --key e98e565c-e1fb-49d1-9494-690b463e8ab4",
-    "cy:run:spec:chrome": "npx cypress run --browser chrome --spec cypress/e2e/sqlVerifierHomePage.cy.js",
-    "cy:run:spec:electron": "npx cypress run --browser electron --spec 'cypress/e2e/sqlVerifierLinks.cy.js'",
-    "cy:run:spec:crossbrowser": "npm run cy:run:spec:chrome && npm run cy:run:spec:electron",
-    "test": "cypress"
+    "cy:run": "cypress run",
+    "cy:dashboard": "npm run cy:run:spec:crossbrowser --record --key 366a3c3e-7826-4385-bee5-a1b68aa9d4a3",
+    "cy:run:api:chrome:13inch": "npx cypress run --spec 'cypress/e2e/signupAndLogin/*' --config-file cypress.config.js --record --key 366a3c3e-7826-4385-bee5-a1b68aa9d4a3",
+    "cy:run:ui:electron:24inch": "npx cypress run --spec 'cypress/e2e/testsUI/*' --config-file cypress-alternative.config.js --record --key 366a3c3e-7826-4385-bee5-a1b68aa9d4a3",
+    "cy:run:nokey:chrome": "npx cypress run --browser chrome --spec 'cypress/e2e/signupAndLogin/*'",
+    "cy:run:nokey:electron": "npx cypress run --browser electron --spec 'cypress/e2e/testsUI/*'",
+    "cy:nokey:parallel": "npm run  cy:run:nokey:chrome & npm run cy:run:nokey:electron",
+    "cy:parallel": "npm run cy:run:api:chrome:13inch -- --browser chrome --group chrome --ci-build-id 3 --parallel & npm run cy:run:ui:electron:24inch -- --browser electron --group electron --ci-build-id 3 --parallel"
   },
   "author": "Lisa",
   "license": "ISC",
