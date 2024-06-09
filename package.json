@@ -10,13 +10,19 @@
     "cy:run:nokey:chrome": "npx cypress run --browser chrome --spec 'cypress/e2e/signupAndLogin/*'",
     "cy:run:nokey:electron": "npx cypress run --browser electron --spec 'cypress/e2e/testsUI/*'",
     "cy:nokey:parallel": "npm run  cy:run:nokey:chrome & npm run cy:run:nokey:electron",
-    "cy:parallel": "npm run cy:run:login:chrome:13inch -- --browser chrome --group chrome --ci-build-id 4 --parallel & npm run cy:run:ui:electron:24inch -- --browser electron --group electron --ci-build-id 4 --parallel"
+    "cy:parallel": "npm run cy:run:login:chrome:13inch -- --browser chrome --group chrome --ci-build-id 4 --parallel & npm run cy:run:ui:electron:24inch -- --browser electron --group electron --ci-build-id 4 --parallel",
+    "allure:clear": "rimraf allure-results && rimraf allure-report",
+    "allure:generate": "allure generate allure-results --clean",
+    "allure:open": "allure open allure-report",
+    "test:allure": "npm run allure:clear && npm run cy:run && npm run allure:generate && npm run allure:open"
   },
   "author": "Lisa",
   "license": "ISC",
   "description": "",
   "devDependencies": {
     "@faker-js/faker": "^8.4.1",
-    "cypress": "^13.8.1"
+    "allure-cypress": "^2.14.0",
+    "cypress": "^13.8.1",
+    "rimraf": "^5.0.7"
   }
 }
